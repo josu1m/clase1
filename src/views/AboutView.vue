@@ -1,15 +1,11 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup lang="ts">
+import { count, increment, decrement } from '@/ts/count'
+</script>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<template>
+  <h2>INCRMENTAR</h2>
+
+  <button @click="increment">Incrementar</button>
+
+  <p>{{ count }}</p>
+</template>
